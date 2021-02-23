@@ -39,8 +39,8 @@ const studentList = [
 const cLastNameResults= studentList.filter (student=> student.lastName.startsWith ("C") && student.firstName.startsWith ("C"))
     .map(student=> {
         return {
-            lname: student.lastName,
             fname: student.firstName,
+            lname: student.lastName,
             avgGrade: student.scores.reduce((total,score) => total + score,0) / student.scores.length,
             minScore: student.scores.reduce((min,score) => Math.min(min,score), 100),
             maxScore: student.scores.reduce((max,score) => Math.max(max,score), 0),
